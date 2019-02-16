@@ -16,5 +16,5 @@ build_meta_plan <- function() {
 get_plan_and_add_group <- function(name) {
   all_obj <- get(name, envir = rlang::global_env())
   all_obj[!rlang::is_closure(all_obj)] %>%
-    tibble::add_column(group = name)
+    tibble::add_column(context = name)
 }
