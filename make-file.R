@@ -1,5 +1,5 @@
 drogger::flog_start()
-source("load-file.R")
+teamtools::load_all()
 purrr::walk(fs::dir_ls("plans", recursive = TRUE), source)
 meta_plan <- build_meta_plan()
 make(meta_plan)

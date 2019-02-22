@@ -1,3 +1,7 @@
 library(dplyr)
 library(drake)
-purrr::walk(fs::dir_ls("R", recursive = TRUE), source)
+r_files <- fs::dir_ls("R", recursive = TRUE)
+cli::cat_line("Sourcing the following files from R/:")
+cli::cat_bullet(r_files)
+purrr::walk(r_files, source)
+cli::cat_rule()

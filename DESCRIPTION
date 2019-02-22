@@ -1,0 +1,9 @@
+Package: DrakeExample
+Version: 0.0.1.9000
+Imports:
+    drogger,
+    teamtools
+Remotes: 
+    lorenzwalthert/drogger,
+    lorenzwalthert/teamtools
+    
